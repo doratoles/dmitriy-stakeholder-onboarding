@@ -1,2 +1,2 @@
 # Conflict Demo
-Status: ready for mentor review
+Status: reviewed by teammate and readiness for mentor review
