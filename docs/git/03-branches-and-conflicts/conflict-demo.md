@@ -1,2 +1,2 @@
 # Conflict Demo
-Status: draft
+Status: ready for mentor review
