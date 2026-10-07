@@ -3,10 +3,13 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from './assets/vite.svg'
 import './App.css'
-import { DashboardPage } from './modules/06-jsx-components/DashboardPage';
+//import { DashboardPage } from './modules/06-jsx-components/DashboardPage';
+import { TeamPage } from './modules/07-props-composition/TeamPage';
 
 function App() {
-  return <DashboardPage />;
+	return (
+		<TeamPage />
+	)
 }
 
 export default App

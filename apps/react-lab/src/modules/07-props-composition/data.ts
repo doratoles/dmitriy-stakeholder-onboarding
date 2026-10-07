@@ -1,4 +1,4 @@
-import { TeamMember } from './types';
+import type { TeamMember } from './types';
 
 export const teamMembers: TeamMember[] = [
     {
@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
             'Фокусуюся на бізнес-цінності кожної фічі.',
         skills: ['Git', 'Vue.js', 'Node.js',  'Laravel', 'SQL'],
         availability: 'available',
-        avatarUrl: 'https://avatars.com/avatars/1.png'
+        avatarUrl: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
             'про існування якого користувач навіть не здогадується.',
         skills: ['Go', 'Redis', 'Kubernetes'],
         availability: 'available',
-        avatarUrl: 'https://avatars.com/avatars/3.png'
+        avatarUrl: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
     },
     {
         id: 4,
@@ -42,6 +42,6 @@ export const teamMembers: TeamMember[] = [
             'ідеально на будь-якому пристрої.',
         skills: ['TypeScript', 'React', 'Tailwind CSS'],
         availability: 'available',
-        avatarUrl: 'https://avatars.com/avatars/4.png'
+        avatarUrl: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
     }
 ];
