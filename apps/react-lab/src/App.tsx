@@ -4,11 +4,12 @@
 //import viteLogo from './assets/vite.svg'
 import './App.css'
 //import { DashboardPage } from './modules/06-jsx-components/DashboardPage';
-import { TeamPage } from './modules/07-props-composition/TeamPage';
+//import { TeamPage } from './modules/07-props-composition/TeamPage';
+import { StakeholderPage } from './modules/08-lists-rendering/StakeholderPage';
 
 function App() {
 	return (
-		<TeamPage />
+		<StakeholderPage />
 	)
 }
 
