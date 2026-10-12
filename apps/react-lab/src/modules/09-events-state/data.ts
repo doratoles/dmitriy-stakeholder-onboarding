@@ -9,7 +9,7 @@ export const stakeholders: Stakeholder[] = [
     {
         id: 2,
         name: 'Іван Шевченко',
-        selected: true
+        selected: false
     },
     {
         id: 3,

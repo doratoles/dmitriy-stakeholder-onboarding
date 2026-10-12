@@ -448,3 +448,165 @@ body {
   background-color: #fee2e2;
   color: #b91c1c;
 }
+
+/* 09-events-state css */
+
+.shortlist-container {
+  max-width: 540px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2d3748;
+}
+
+.add-stakeholder-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stakeholder-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.stakeholder-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.shortlist-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.counter-highlight {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.short-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stakeholder-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.stakeholder-item:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.stakeholder-item.is-selected {
+  background-color: #f0fdf4;
+  border-color: #86efac;
+}
+
+.stakeholder-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stakeholder-name {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.stakeholder-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-base {
+  padding: 7px 13px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.btn-base:active {
+  transform: scale(0.97);
+}
+
+.btn-add {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 5px 12px;
+}
+
+.btn-reset:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.btn-toggle {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.btn-toggle:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-remove {
+  background-color: #fff1f2;
+  color: #e11d48;
+}
+
+.btn-remove:hover {
+  background-color: #ffe4e6;
+}
