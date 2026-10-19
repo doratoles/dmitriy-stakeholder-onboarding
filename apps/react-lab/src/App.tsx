@@ -8,11 +8,12 @@ import './App.css'
 //import { StakeholderPage } from './modules/08-lists-rendering/StakeholderPage';
 //import { ShortlistPage } from './modules/09-events-state/ShortlistPage';
 //import { StakeholderFormPage } from './modules/10-forms/StakeholderFormPage';
-import { StructuredStatePage } from './modules/11-structured-state/StructuredStatePage';
+//import { StructuredStatePage } from './modules/11-structured-state/StructuredStatePage';
+import { AsyncStakeholderPage } from './modules/12-effects-async/AsyncStakeholderPage';
 
 function App() {
 	return (
-		<StructuredStatePage />
+		<AsyncStakeholderPage />
 	)
 }
 
