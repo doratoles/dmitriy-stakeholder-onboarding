@@ -9,11 +9,12 @@ import './App.css'
 //import { ShortlistPage } from './modules/09-events-state/ShortlistPage';
 //import { StakeholderFormPage } from './modules/10-forms/StakeholderFormPage';
 //import { StructuredStatePage } from './modules/11-structured-state/StructuredStatePage';
-import { AsyncStakeholderPage } from './modules/12-effects-async/AsyncStakeholderPage';
+//import { AsyncStakeholderPage } from './modules/12-effects-async/AsyncStakeholderPage';
+import { MiniProjectPage } from './modules/13-mini-project/MiniProjectPage';
 
 function App() {
 	return (
-		<AsyncStakeholderPage />
+		<MiniProjectPage />
 	)
 }
 
