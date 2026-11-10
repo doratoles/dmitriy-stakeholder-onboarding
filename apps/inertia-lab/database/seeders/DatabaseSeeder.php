@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Organization;
 use App\Models\Role;
 use App\Models\Stakeholder;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,12 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+        User::factory()->create([
+            'name' => 'doratoles',
+            'email' => 'doratoles@gmail.com',
+            'password' => bcrypt('OyJwenTF22'),
+        ]);
+
         $roles = [
             ['id' => 1, 'title' => 'Замовник / Клієнт'],
             ['id' => 2, 'title' => 'Product Manager'],
