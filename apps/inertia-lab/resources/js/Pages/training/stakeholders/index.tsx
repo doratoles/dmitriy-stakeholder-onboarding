@@ -1,6 +1,6 @@
 import React from 'react';
 import { Head, Link } from '@inertiajs/react';
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import TrainingLayout from '@/Layouts/TrainingLayout';
 
 export interface Stakeholder {
     id: number;
@@ -27,7 +27,7 @@ export default function Index({ stakeholders, availableRoles }: IndexProps) {
     };
 
     return (
-        <AuthenticatedLayout header={<h2 className="text-xl font-semibold leading-tight text-gray-800">Каталог стейкхолдерів</h2>}>
+        <TrainingLayout header={<h2 className="text-xl font-semibold leading-tight text-gray-800">Каталог стейкхолдерів</h2>}>
             <Head title="Stakeholder Directory" />
 
             <div className="py-8">
@@ -85,6 +85,6 @@ export default function Index({ stakeholders, availableRoles }: IndexProps) {
                     )}
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </TrainingLayout>
     );
 }

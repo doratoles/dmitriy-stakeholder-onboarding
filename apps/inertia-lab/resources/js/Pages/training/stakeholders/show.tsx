@@ -1,6 +1,6 @@
 import React from 'react';
 import { Head, Link } from '@inertiajs/react';
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import TrainingLayout from '@/Layouts/TrainingLayout';
 
 export interface StakeholderDetail {
     id: number;
@@ -27,7 +27,7 @@ export default function Show({ stakeholder, availableRoles }: ShowProps) {
     const roleTitle = availableRoles.find((r) => r.id === stakeholder.role)?.title || `ID: ${stakeholder.role}`;
 
     return (
-        <AuthenticatedLayout header={<h2 className="text-xl font-semibold leading-tight text-gray-800">Профіль стейкхолдера</h2>}>
+        <TrainingLayout header={<h2 className="text-xl font-semibold leading-tight text-gray-800">Профіль стейкхолдера</h2>}>
             <Head title={`Стейкхолдер — ${stakeholder.name}`} />
 
             <div className="py-8">
@@ -38,6 +38,12 @@ export default function Show({ stakeholder, availableRoles }: ShowProps) {
                             <p className="stakeholder-page-subtitle">{stakeholder.organization}</p>
                         </div>
                         <div className="stakeholder-header-actions">
+                            <Link
+                                href={`/training/stakeholders/${stakeholder.id}/edit`}
+                                className="stakeholder-btn stakeholder-btn-edit"
+                            >
+                                Редагувати
+                            </Link>
                             <Link
                                 href="/training/stakeholders"
                                 className="stakeholder-btn stakeholder-btn-edit"
@@ -87,6 +93,6 @@ export default function Show({ stakeholder, availableRoles }: ShowProps) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </TrainingLayout>
     );
 }
