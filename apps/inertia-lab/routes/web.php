@@ -17,8 +17,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/training/stakeholders', [StakeholderPageController::class, 'index'])
         ->name('training.stakeholders.index');
 
+    Route::get('/training/stakeholders/create', [StakeholderPageController::class, 'create'])
+        ->name('training.stakeholders.create');
+
+    Route::post('/training/stakeholders', [StakeholderPageController::class, 'store'])
+        ->name('training.stakeholders.store');
+
     Route::get('/training/stakeholders/{stakeholder}', [StakeholderPageController::class, 'show'])
         ->name('training.stakeholders.show');
+
+    Route::get('/training/stakeholders/{stakeholder}/edit', [StakeholderPageController::class, 'edit'])
+        ->name('training.stakeholders.edit');
+
+    Route::put('/training/stakeholders/{stakeholder}', [StakeholderPageController::class, 'update'])
+        ->name('training.stakeholders.update');
 });
 
 Route::middleware('auth')->group(function () {
