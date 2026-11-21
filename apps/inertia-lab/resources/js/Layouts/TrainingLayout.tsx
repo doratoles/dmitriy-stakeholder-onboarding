@@ -8,12 +8,16 @@ interface SharedUser {
     email: string;
 }
 
-type SharedPageProps = PageProps & {
+export type SharedPageProps = PageProps & {
     auth: {
         user: SharedUser | null;
     };
     flash?: {
         success?: string | null;
+        error?: string | null;
+    };
+    can?: {
+        create?: boolean;
     };
 };
 
@@ -23,7 +27,7 @@ interface TrainingLayoutProps {
 }
 
 export default function TrainingLayout({ children, header }: TrainingLayoutProps) {
-    const { auth, flash } = usePage<SharedPageProps>().props;
+    const { auth, flash, can } = usePage<SharedPageProps>().props;
 
     return (
         <div className="min-h-screen bg-gray-100 text-gray-900">
@@ -36,14 +40,16 @@ export default function TrainingLayout({ children, header }: TrainingLayoutProps
                         >
                             Stakeholder Directory
                         </Link>
-                        <div className="flex items-center gap-3">
-                            <Link
-                                href="/training/stakeholders/create"
-                                className="rounded-md bg-green-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-green-700"
-                            >
-                                Створити нового стейкхолдера
-                            </Link>
-                        </div>
+                        {can?.create !== false && (
+                            <div className="flex items-center gap-3">
+                                <Link
+                                    href="/training/stakeholders/create"
+                                    className="rounded-md bg-green-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-green-700"
+                                >
+                                    Створити нового стейкхолдера
+                                </Link>
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex items-center gap-4">

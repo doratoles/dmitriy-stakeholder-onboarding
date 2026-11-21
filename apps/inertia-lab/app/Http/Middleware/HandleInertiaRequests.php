@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use App\Models\Stakeholder;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -40,6 +41,10 @@ class HandleInertiaRequests extends Middleware
             ],
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
+                'error' => fn () => $request->session()->get('error'),
+            ],
+            'can' => [
+                'create' => $request->user() ? $request->user()->can('create', Stakeholder::class) : false,
             ],
         ];
     }
