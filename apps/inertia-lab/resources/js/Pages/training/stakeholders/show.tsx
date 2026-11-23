@@ -11,6 +11,9 @@ export interface StakeholderDetail {
     influence: number;
     active?: boolean;
     notes?: string | null;
+    can?: {
+        update?: boolean;
+    };
 }
 
 export interface RoleOption {
@@ -38,12 +41,14 @@ export default function Show({ stakeholder, availableRoles }: ShowProps) {
                             <p className="stakeholder-page-subtitle">{stakeholder.organization}</p>
                         </div>
                         <div className="stakeholder-header-actions">
-                            <Link
-                                href={`/training/stakeholders/${stakeholder.id}/edit`}
-                                className="stakeholder-btn stakeholder-btn-edit"
-                            >
-                                Редагувати
-                            </Link>
+                            {stakeholder.can?.update !== false && (
+                                <Link
+                                    href={`/training/stakeholders/${stakeholder.id}/edit`}
+                                    className="stakeholder-btn stakeholder-btn-edit"
+                                >
+                                    Редагувати
+                                </Link>
+                            )}
                             <Link
                                 href="/training/stakeholders"
                                 className="stakeholder-btn stakeholder-btn-edit"
